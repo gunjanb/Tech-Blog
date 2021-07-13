@@ -1,5 +1,8 @@
+/* added margin bottom so that footer not overlap with content as were doing with fixed-bottom */
+/* added margin top so that forms have some space at top */
 .container {
   margin-bottom: 5rem;
+  margin-top: 3rem;
 }
 
 .custom-color {
@@ -15,6 +18,7 @@ body {
   background-color: #e1f2da;
 }
 
+/* making footer to remain at bottom */
 .custom-footer {
   position: fixed;
   left: 0;
@@ -24,4 +28,8 @@ body {
   color: white;
   text-align: center;
   padding-top: 1rem;
+}
+
+.custom-text-color {
+  color: #330b03;
 }
