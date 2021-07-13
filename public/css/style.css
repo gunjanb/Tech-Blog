@@ -1,1 +1,27 @@
+.container {
+  margin-bottom: 5rem;
+}
 
+.custom-color {
+  background-color: #330b03;
+}
+
+body {
+  background-color: #e1f2da;
+  font-size: 1rem;
+}
+
+.custom-card-body {
+  background-color: #e1f2da;
+}
+
+.custom-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #330b03;
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+}
