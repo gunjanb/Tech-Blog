@@ -33,3 +33,26 @@ body {
 .custom-text-color {
   color: #330b03;
 }
+
+.custom-width {
+  width: 25rem;
+}
+
+a.title-links {
+  color: white;
+  text-decoration: none;
+}
+
+a.title-links :hover {
+  color: grey;
+  /* text-decoration: none; */
+}
+
+.custom-effect {
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-effect:hover {
+  box-shadow: inset 0px 0px 8px #89ec92, 0 0 15px green;
+  transform: scale(1.1);
+}
