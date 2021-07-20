@@ -1,0 +1,25 @@
+<section class="row justify-content-center">
+  <form class="update-comment">
+    <div
+      class="custom-width d-flex flex-column m-2 userId"
+      data-id="{{currentuser}}"
+    >
+      <label for="comment">Update your Comment here:</label>
+      <textarea
+        name="comment"
+        id="comment"
+        rows="5"
+        required
+      >{{commentData.comment_text}}</textarea>
+    </div>
+    <div class="m-4 d-flex justify-content-around">
+      <button
+        type="submit"
+        class="btn btn-secondary update-btn"
+        data-id="{{commentData.user_id}},{{commentData.post_id}}"
+      > Update</button>
+    </div>
+  </form>
+</section>
+
+<script src="/js/updatecomment.js"></script>
