@@ -1,0 +1,64 @@
+<div
+  class="card m-3 border border-dark rounded"
+  id="userId"
+  data-id="{{currentuser}}"
+>
+  <div
+    class="card-header d-flex justify-content-between custom-color text-light"
+  >
+    <h5>{{post.title}}</h5>
+    <p>posted by {{post.user.name}} on {{format_date post.created_at}}</p>
+  </div>
+  <div class="card-body custom-card-body">
+    <p class="card-text">
+      {{post.content}}
+    </p>
+  </div>
+</div>
+
+{{#if post.comments.length}}
+  {{#each post.comments as |comment|}}
+    <div class="card m-3 border border-dark rounded">
+      <div class="card-header d-flex justify-content-between custom-card-body">
+        <p class="mb-3">{{comment.comment_text}}</p>
+        <p class="mb-3">-- {{comment.user.name}}, {{format_date created_at}}</p>
+      </div>
+      <div class="d-flex justify-content-center custom-card-body">
+        <p>
+          <button
+            type="submit"
+            class="btn btn-secondary delete-btn m-1"
+            data-id="{{comment.user_id}},{{comment.id}}"
+          >Delete</button>
+        </p>
+        <p><button
+            type="submit"
+            class="btn btn-secondary update-btn m-1"
+            data-id="{{comment.user_id}},{{comment.id}}"
+          >Update</button></p>
+      </div>
+    </div>
+
+  {{/each}}
+{{/if}}
+
+<section class="row justify-content-center">
+  <form class="commentForm">
+    <div class="custom-width d-flex flex-column m-2">
+      <label for="comment"></label>
+      <textarea
+        name="comment"
+        id="comment"
+        rows="5"
+        placeholder="Enter your Comment and be nice"
+      ></textarea>
+    </div>
+    <div class="m-4 d-flex justify-content-around">
+      <button type="submit" class="btn btn-secondary"> Submit</button>
+    </div>
+  </form>
+</section>
+
+<script src="/js/comment.js"></script>
+<script src="/js/deletecomment.js"></script>
+<script src="/js/commentupdateform.js"></script>
