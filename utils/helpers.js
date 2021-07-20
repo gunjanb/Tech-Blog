@@ -8,4 +8,10 @@ module.exports = {
       date
     ).getDate()}/${new Date(date).getFullYear()}`;
   },
+
+  // not used
+  checkuser: (loggedinuser, commentuser) => {
+    if (loggedinuser === commentuser) return true;
+    else return false;
+  },
 };
