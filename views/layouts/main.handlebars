@@ -39,7 +39,7 @@
           role="navigation"
           id="navbarNavAltMarkup"
         >
-          <div class="navbar-nav">
+          <div class="navbar-nav ">
             <a class="nav-item nav-link active" href="/"
               >Home <span class="sr-only">(current)</span></a
             >
@@ -50,6 +50,10 @@
             {{else}}
             <a class="nav-item nav-link" href="/login">Login</a>
              {{/if}}
+            <form class="form-inline my-2 my-lg-0" id="search-form">
+              <input type="text" class="form-control mr-sm-2 bg-light text-dark" id="search-input" name="search-text" placeholder="Search" aria-label="Search" required>
+              <button type="submit" class="btn btn-light my-2 my-sm-0" id="btn-post">Search</button>
+            </form>
           </div>
         </div>
       </nav>
@@ -89,5 +93,6 @@
       integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/search.js"></script>
   </body>
 </html>
