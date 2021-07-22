@@ -56,3 +56,9 @@ a.title-links :hover {
   box-shadow: inset 0px 0px 8px #89ec92, 0 0 15px green;
   transform: scale(1.1);
 }
+
+@media only screen and (max-width: 422px) {
+  .custom-width {
+    width: 15rem;
+  }
+}
