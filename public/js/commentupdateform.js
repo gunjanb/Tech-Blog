@@ -22,7 +22,8 @@ const updateCommentHandler = async (event) => {
         alert("Failed to render form.");
       }
     } else {
-      alert("You cant modify comment as not owned by you.");
+      $("#exampleModal").modal("show");
+      // alert("You cant modify comment as not owned by you.");
     }
   }
 };

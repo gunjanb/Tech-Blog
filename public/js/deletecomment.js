@@ -17,11 +17,13 @@ const deleteCommentHandler = async (event) => {
 
       if (response.ok) {
         window.location.reload();
+        // location.href = location.href;
       } else {
         alert("Failed to delete comment.");
       }
     } else {
-      alert("You cant delete this comment as  not owned by you");
+      $("#exampleModal").modal("show");
+      // alert("You cant delete this comment as  not owned by you");
     }
   }
 };

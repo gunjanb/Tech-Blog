@@ -22,7 +22,18 @@ async function commentFormHandler(event) {
     });
 
     if (response.ok) {
-      window.location.reload();
+      // document.location.reload();
+      // window.location.reload();
+      location.href = location.href;
+      // document.location.replace(`/post/${post_id}`);
+      // window.location.reload();
+      // const response = await fetch(`/post/${post_id}`, {
+      //   method: "get",
+      //   headers: { "Content-Type": "application/json" },
+      // });
+      // if (response.ok) {
+      //   window.location.reload();
+      // }
     } else {
       alert(response.statusText);
     }

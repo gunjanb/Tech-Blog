@@ -10,6 +10,12 @@ router.post("/", withAuth, async (req, res) => {
       post_id: req.body.post_id,
       user_id: req.session.user_id,
     });
+    //req.flash("success", "Comment added!");
+    req.session.message = {
+      type: "success",
+      intro: " ",
+      message: "Your comment added successfully!",
+    };
     res.json(dbCommentData);
   } catch (err) {
     res.status(500).json(err);
@@ -29,6 +35,11 @@ router.delete("/:id", withAuth, async (req, res) => {
       res.status(404).json({ message: "No comment found with this id" });
       return;
     }
+    req.session.message = {
+      type: "success",
+      intro: " ",
+      message: "Your comment deleted successfully!",
+    };
     res.json(dbCommentData);
   } catch (err) {
     res.status(500).json(err);
@@ -53,6 +64,11 @@ router.put("/:id", withAuth, async (req, res) => {
       res.status(404).json({ message: "No post found with this id" });
       return;
     }
+    req.session.message = {
+      type: "success",
+      intro: " ",
+      message: "Your comment updated successfully!",
+    };
     res.json(dbCommentData);
   } catch (err) {
     res.status(500).json(err);

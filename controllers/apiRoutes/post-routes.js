@@ -10,6 +10,11 @@ router.post("/", withAuth, async (req, res) => {
       content: req.body.blogcontent,
       user_id: req.session.user_id,
     });
+    req.session.message = {
+      type: "success",
+      intro: " ",
+      message: "Your  Post added successfully!",
+    };
     res.json(dbPostData);
   } catch (err) {
     res.status(500).json(err);
@@ -29,7 +34,12 @@ router.delete("/:id", withAuth, async (req, res) => {
       res.status(404).json({ message: "No post found with this id" });
       return;
     }
-    console.log(dbPostData);
+    // console.log(dbPostData);
+    req.session.message = {
+      type: "success",
+      intro: " ",
+      message: "Your  Post deleted successfully!",
+    };
     res.json(dbPostData);
   } catch (err) {
     res.status(500).json(err);
@@ -55,7 +65,11 @@ router.put("/:id", withAuth, async (req, res) => {
       res.status(404).json({ message: "No post found with this id" });
       return;
     }
-
+    req.session.message = {
+      type: "success",
+      intro: " ",
+      message: "Your  Post Updated successfully!",
+    };
     res.json(dbPostData);
   } catch (err) {
     res.status(500).json(err);

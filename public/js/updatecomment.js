@@ -17,25 +17,26 @@ const updateCommentHandler = async (event) => {
   var commentDataArray = commentData.split(",");
   var comment_user = commentDataArray[0];
   var comment_postId = commentDataArray[1];
-  if (current_user_id === comment_user) {
-    const response = await fetch(`/api/comments/${commentid}`, {
-      method: "PUT",
-      body: JSON.stringify({
-        commentText,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  // if (current_user_id === comment_user) {
+  const response = await fetch(`/api/comments/${commentid}`, {
+    method: "PUT",
+    body: JSON.stringify({
+      commentText,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
-    if (response.ok) {
-      location.replace(`/post/${comment_postId}`);
-    } else {
-      alert("Failed to update comment.");
-    }
+  if (response.ok) {
+    location.replace(`/post/${comment_postId}`);
   } else {
-    alert("You cannot update comment as it not belongs to u");
+    alert("Failed to update comment.");
   }
+  // } else {
+  // $("#exampleModal").modal("show");
+  // alert("You cannot update comment as it not belongs to u");
+  // }
 };
 
 document
