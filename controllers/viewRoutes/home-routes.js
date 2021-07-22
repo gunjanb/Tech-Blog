@@ -139,10 +139,24 @@ router.get("/search/:searchtext", async (req, res) => {
     console.log("In sercah route", req.params.searchtext);
     const dbSearchData = await Post.findAll({
       // limit: 5,
+      // where: {
+      //   content: {
+      //     [Op.like]: "%" + req.params.searchtext + "%",
+      //   },
+      // },
       where: {
-        content: {
-          [Op.like]: "%" + req.params.searchtext + "%",
-        },
+        [Op.or]: [
+          {
+            title: {
+              [Op.like]: "%" + req.params.searchtext + "%",
+            },
+          },
+          {
+            content: {
+              [Op.like]: "%" + req.params.searchtext + "%",
+            },
+          },
+        ],
       },
       attributes: ["id", "title", "content", "created_at"],
       order: [["created_at", "DESC"]],

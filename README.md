@@ -51,7 +51,7 @@ The Tech-Blog is a CMS-style blog site similar to a Wordpress site, where develo
 
 - Deployed Link at Heroku
 
-  [View App Here]()
+  [View App Here](https://blooming-wildwood-80898.herokuapp.com/)
 
 ## License
 

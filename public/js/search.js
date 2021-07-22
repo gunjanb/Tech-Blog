@@ -5,7 +5,7 @@ async function searchFormHandler(event) {
   console.log("In serch js file", search);
   if (search) {
     const response = await fetch(`/search/${search}`, {
-      method: "get",
+      method: "GET",
       headers: { "Content-Type": "application/json" },
     });
 
