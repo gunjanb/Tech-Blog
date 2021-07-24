@@ -35,19 +35,19 @@ The Tech-Blog is a CMS-style blog site similar to a Wordpress site, where develo
 
 - Homepage
 
-  ![CLI](./images/)
+  ![CLI](./public/images/Homepage.jpg)
 
 - User Dashboard
 
-  ![CLI](./images/)
+  ![CLI](./public/images/Dashboard.jpg)
 
 - User Comments
 
-  ![CLI](./images/)
+  ![CLI](./public/images/comment.jpg)
 
 - Mock Up
 
-  ![mockup](./images/)
+  ![mockup](./public/images/TechBlog.gif)
 
 - Deployed Link at Heroku
 
@@ -67,14 +67,14 @@ The Tech-Blog is a CMS-style blog site similar to a Wordpress site, where develo
 
 ## Technologies
 
-- Node.js
-- Express
-- MySQL
-- Sequelize
-- Handlebars
-- Insomnia
-- HTML,CSS,JavaScript
-- Bootstrap CSS Framework
+- `Node.js`
+- `Express`
+- `MySQL`
+- `Sequelize`
+- `Handlebars`
+- `Insomnia`
+- `HTML,CSS,JavaScript`
+- `Bootstrap CSS Framework`
 
 ## Questions
 
